@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.link {
+    text-decoration: none;
+    color: #333;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1000px;
+    text-align: center;
+    background: #eee;
+}
+
+.heading {
+    margin-top: 0;
+    padding-top: 15px;
+}
+
+input:focus{
+    outline: none;
+}
+
+#submit {
+    display: inline-block;
+    padding: 7px 80px;
+    background-color: royalblue;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+#back {
+    display: inline-block;
+    padding: 7px 80px;
+    background-color: royalblue;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+#recipe,#budget {
+    width: 150px;
+    padding: 3px;
+}
+
+#yen {
+    margin-left: 5px;
+}
+
+#howto_title {
+    margin: 2px;
+}
+
+#howto {
+    padding: 3px;
+}
+
+#howto:focus{
+    outline: none;
+}
+
+th {
+    border: 1px solid #333;
+    padding: 3px;
+    border-collapse: collapse;
+}
