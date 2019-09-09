@@ -17,6 +17,8 @@
         $stmt = $dbh->query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
+<h1>レシピの一覧</h1>
+<a href="index.html">レシピの新規追加</a>
     <table>
         <tr>
             <th>料理名</th>
@@ -29,6 +31,10 @@
             echo "<td>".htmlspecialchars($row["recipe_name"],ENT_QUOTES, "UTF-8")."</td>\n";
             echo "<td>".htmlspecialchars($row["budget"],ENT_QUOTES, "UTF-8")."</td>\n";
             echo "<td>".htmlspecialchars($row["difficulty"],ENT_QUOTES, "UTF-8")."</td>\n";
+            echo "<td>\n";
+            echo "<a href=detail.php?id=".htmlspecialchars($row["id"],ENT_QUOTES, "UTF-8").">詳細</a>\n";
+            echo "<a href=edit.php?id=".htmlspecialchars($row["id"],ENT_QUOTES, "UTF-8").">変更</a>\n";
+            echo "<a id='sakujo' href=delete.php?id=".htmlspecialchars($row["id"],ENT_QUOTES, "UTF-8").">削除</a>\n";
             echo "</tr>\n";
         }
         ?>
@@ -39,6 +45,7 @@
     echo "エラー発生:".htmlspecialchars($e->getMessage(),ENT_QUETES, "UTF-8"). "<br>";
     die();
     }
-?>
+    ?>
+    <script src="main.js"></script>
 </body>
 </html>
